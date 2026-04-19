@@ -1,0 +1,11 @@
+.nav-link {
+  color: white;
+  transition: 0.3s;
+  /* makes it pill shape */
+}
+
+.nav-link:hover {
+  background-color: blueviolet;
+  padding: 10px 20px;
+  border-radius: 999px;
+}
