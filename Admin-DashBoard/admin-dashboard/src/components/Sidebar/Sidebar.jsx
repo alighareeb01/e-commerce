@@ -7,16 +7,6 @@ export default function Sidebar() {
       <ul className="flex flex-col gap-3">
         <li>
           <NavLink
-            to="/dashboard"
-            end
-            className="block rounded-md px-4 py-2 hover:bg-white/20 transition"
-          >
-            Dashboard
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink
             to="/dashboard/categories"
             className="block rounded-md px-4 py-2 hover:bg-white/20 transition"
           >
