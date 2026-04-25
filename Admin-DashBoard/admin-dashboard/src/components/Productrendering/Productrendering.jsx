@@ -26,7 +26,7 @@ export default function Productrendering({ products }) {
           </p>
 
           <div className="flex justify-between items-center mt-3">
-            <span className="text-green-400 font-bold text-lg">
+            <span className="text-white font-bold text-lg">
               ${products.price}
             </span>
             <span className="text-xs text-gray-400">
