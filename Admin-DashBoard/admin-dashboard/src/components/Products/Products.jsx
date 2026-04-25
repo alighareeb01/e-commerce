@@ -31,7 +31,7 @@ export default function Products() {
   }, []);
   return (
     <div>
-      <div className=" flex justify-between text-white mb-5">
+      <div className=" flex flex-col sm:flex-row gap-4 sm:justify-between text-white mb-5">
         <div className="grid grid-cols-2 gap-5 bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg p-5 rounded-2xl  ">
           <span className="cursor-pointer hover:text-violet-600 transition delay-50 duration-300 ease-in-out">
             add product
@@ -66,7 +66,7 @@ export default function Products() {
       ) : isLoading ? (
         <Loading />
       ) : (
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {products.map((el) => {
             return <Productrendering products={el} key={el._id} />;
           })}

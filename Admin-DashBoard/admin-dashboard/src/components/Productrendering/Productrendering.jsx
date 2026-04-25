@@ -25,7 +25,7 @@ export default function Productrendering({ products }) {
             {products.description}
           </p>
 
-          <div className="flex justify-between items-center mt-3">
+          <div className="flex flex-col   sm:flex-row  sm:justify-between sm:items-center mt-3 gap-2">
             <span className="text-white font-bold text-lg">
               ${products.price}
             </span>
