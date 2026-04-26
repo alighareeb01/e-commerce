@@ -49,6 +49,12 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/addadmin" className="nav-link">
+                <FontAwesomeIcon icon={faList} />
+                <span className="hidden md:inline">add admin</span>
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/dashboard" className="nav-link">
                 <FontAwesomeIcon icon={faBox} />
                 <span className="hidden md:inline">Dashboard</span>

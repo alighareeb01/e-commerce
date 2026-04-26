@@ -20,6 +20,7 @@ import Layoutsecondary from "./components/Layoutsecondary/Layoutsecondary";
 import Users from "./components/Users/Users";
 import Adduser from "./components/Adduser/Adduser";
 import Dashboard from "./components/Dashboard/Dashboard";
+import AddAdmin from "./components/AddAdmin/AddAdmin";
 
 const routes = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const routes = createBrowserRouter([
       {
         path: "adduser",
         element: <Adduser />,
+      },
+      {
+        path: "addadmin",
+        element: <AddAdmin />,
       },
     ],
   },
