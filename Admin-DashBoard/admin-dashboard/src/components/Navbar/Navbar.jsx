@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,9 +10,17 @@ import {
   faList,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { useAuthStore } from "../../store/authStore";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const logoutToken = useAuthStore((state) => state.logoutToken);
+  const nav = useNavigate();
+
+  function logutButton() {
+    logoutToken();
+    nav("/login");
+  }
 
   function toggleDropMenu() {
     setOpen((prev) => !prev);
@@ -55,6 +64,12 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/login" className="nav-link">
+                <FontAwesomeIcon icon={faBox} />
+                <span className="hidden md:inline">Login</span>
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/dashboard" className="nav-link">
                 <FontAwesomeIcon icon={faBox} />
                 <span className="hidden md:inline">Dashboard</span>
@@ -77,7 +92,11 @@ export default function Navbar() {
                   >
                     profile
                   </NavLink>
-                  <li className="nav-link flex justify-center">Logout</li>
+                  <li className="nav-link flex justify-center cursor-pointer">
+                    <button type="button" onClick={logutButton}>
+                      logout
+                    </button>
+                  </li>
                 </ul>
               </div>
             )}

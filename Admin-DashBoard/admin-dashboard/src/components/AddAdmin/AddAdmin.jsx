@@ -53,7 +53,7 @@ export default function AddAdmin() {
           method: "POST",
           headers: {
             autherization:
-              "super-admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWVjZThkZWMzYmExMzUxNDczYzdmZTciLCJyb2xlIjoic3VwZXItYWRtaW4iLCJpYXQiOjE3NzcxNTI5MzcsImV4cCI6MTc3NzIzOTMzN30.zbLFxGykdJvSGw9rG06vkC2AF_vx2TfLVZupHFZ9DGs",
+              "super-admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWVjZThkZWMzYmExMzUxNDczYzdmZTciLCJyb2xlIjoic3VwZXItYWRtaW4iLCJpYXQiOjE3Nzc4MDg4MjYsImV4cCI6MTgwOTM2NjQyNn0.S_d9mOMsraunIXKvzBCY7OFPYi3aj2XN7hgXAnElnX8",
           },
           body: formData,
         },

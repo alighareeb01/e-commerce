@@ -21,6 +21,8 @@ import Users from "./components/Users/Users";
 import Adduser from "./components/Adduser/Adduser";
 import Dashboard from "./components/Dashboard/Dashboard";
 import AddAdmin from "./components/AddAdmin/AddAdmin";
+import Login from "./components/Login/Login";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 const routes = createBrowserRouter([
   {
@@ -40,13 +42,24 @@ const routes = createBrowserRouter([
         path: "addadmin",
         element: <AddAdmin />,
       },
+      {
+        path: "login",
+        element: <Login />,
+      },
     ],
   },
   {
     path: "/dashboard",
-    element: <Layoutsecondary />,
+    element: (
+      <ProtectedRoute>
+        <Layoutsecondary />
+      </ProtectedRoute>
+    ),
     children: [
-      { index: true, element: <Dashboard /> },
+      {
+        index: true,
+        element: <Dashboard />,
+      },
 
       {
         path: "categories",
